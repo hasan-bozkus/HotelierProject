@@ -47,6 +47,10 @@ namespace HotelProject.WebApi
             services.AddScoped<ISubscribeDal, EFSubscribeDal>();
             services.AddScoped<ISubscribeService, SubscribeManager>();
 
+            services.AddAutoMapper(typeof(Startup));
+
+            //services.AddScoped<>();
+
 
             services.AddCors(opt =>
             {
