@@ -23,6 +23,7 @@ namespace HotelProject.WebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient();
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
         }
 
