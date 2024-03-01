@@ -41,7 +41,7 @@ namespace HotelProject.WebApi.Controllers
             return Ok("Başarıyla Eklendi");
         }
 
-        [HttpPut]
+        [HttpPut("UpdateBooking")]
         public IActionResult UpdateBooking(UpdateBookingDto updateBookingDto)
         {
             if (!ModelState.IsValid)
@@ -74,6 +74,20 @@ namespace HotelProject.WebApi.Controllers
             }
             var values = _bookignService.TGetByID(id);
             return Ok(values);
+        }
+
+        [HttpPut("aaaaa")]
+        public IActionResult aaaaa(Booking booking)
+        {
+            _bookignService.TBookingSatusChangeApproved(booking);
+            return Ok();
+        }
+
+        [HttpPut("bbbbb")]
+        public IActionResult bbbbb(int id)
+        {
+            _bookignService.TBookingSatusChangeApproved2(id);
+            return Ok();
         }
     }
 }

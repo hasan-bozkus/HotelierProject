@@ -1,3 +1,4 @@
---Api Testi ve Swagger
-Temayý ekleyelim
-Register - Login  
+onay bekliyor
+onaylandý 
+iptal edildi
+bekletiliyor
