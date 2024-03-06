@@ -1,0 +1,28 @@
+﻿@model HotelProject.WebUI.Dtos.AboutDto.UpdateAboutDto
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+<form method="post">
+    <input type="hidden" asp-for="AboutID" />
+
+    <label>Başlık 1</label>
+    <input type="text" class="form-control" asp-for="Title1" />
+    <br />
+    <label>Başlığı 2 </label>
+    <input type="text" class="form-control" asp-for="Title2" />
+    <br />
+    <label>İçerik</label>
+    <input type="text" class="form-control" asp-for="Content" />
+    <br />
+    <label>Personel Sayısı</label>
+    <input type="text" class="form-control" asp-for="StaffConut" />
+    <br />
+    <label>Oda Sayısı</label>
+    <input type="text" class="form-control" asp-for="RoomCount" />
+    <br />
+    <label>Misafir Sayısı</label>
+    <input type="text" class="form-control" asp-for="CustomerConut" />
+    <br />
+    <button class="btn mb-1 btn-rounded btn-outline-success">Kaydet</button>
+</form>
