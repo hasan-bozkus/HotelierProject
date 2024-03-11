@@ -18,7 +18,7 @@ namespace HotelProject.WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetListContact()
+        public IActionResult InboxListContact()
         {
             var values = _contactService.TGetList();
             return Ok(values);
@@ -31,6 +31,13 @@ namespace HotelProject.WebApi.Controllers
             contact.Date = Convert.ToDateTime(DateTime.Now.ToString());
             _contactService.TInsert(contact);
             return Ok("İletişim başarıyla gönderildi");
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetSendMessage(int id)
+        {
+            var values = _contactService.TGetByID(id);
+            return Ok(values);
         }
     }
 }
