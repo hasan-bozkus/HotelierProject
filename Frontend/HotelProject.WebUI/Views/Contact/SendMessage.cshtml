@@ -1,11 +1,11 @@
-﻿@model HotelProject.WebUI.Dtos.ContactDto.CreateContactDto
+﻿@model CreateContactDto
 
 <!-- Contact Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title text-center text-primary text-uppercase">Bize UlaŞın</h6>
-            <h1 class="mb-5"><span class="text-primary text-uppercase">Tüm Sorularınız İÇİN</span> BİZE Yazabİlİrsİnİz</h1>
+            <h1 class="mb-5"><span class="text-primary text-uppercase">Tüm Sorularınız İÇİN</span> Bize Yazabilirsiniz</h1>
         </div>
         <div class="row g-4">
             <div class="col-12">
@@ -47,10 +47,16 @@
                                     <label for="email">E-Posta Adresiniz</label>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    @Html.DropDownListFor(x => x.MessageCategoryID, (List<SelectListItem>)ViewData["messageCategory"], new { @class = "form-control" })
+                                    <label for="subject">Konuyu Seçin</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="subject" asp-for="Subject" placeholder="Konu">
-                                    <label for="subject">konu</label>
+                                    <label for="subject">Konu Başlığını Yazınız</label>
                                 </div>
                             </div>
                             <div class="col-12">
