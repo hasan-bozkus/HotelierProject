@@ -65,6 +65,12 @@ namespace HotelProject.WebApi
             services.AddScoped<IMessageCategoryDal, EFMessageCategoryDal>();
             services.AddScoped<IMessageCategoryService, MessageCategoryManager>();
 
+            services.AddScoped<IWorkLocationDal, EFWorkLocationDal>();
+            services.AddScoped<IWorkLocationService, WorkLocationManager>();
+
+            services.AddScoped<IAppUserDal, EFAppUserDal>();
+            services.AddScoped<IAppUserService, AppUserManager>();
+
             services.AddAutoMapper(typeof(Startup));
 
             //services.AddScoped<>();
@@ -78,7 +84,7 @@ namespace HotelProject.WebApi
                 });
             });
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelProject.WebApi", Version = "v1" });
