@@ -1,0 +1,59 @@
+﻿@model List<ResultAppUserWithWorkLocationDto>
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml"; 
+    int count = 0;
+    string gender = "";
+    string genderClass = "";
+    string genderprogressbarClass = "";
+}
+
+<div class="table-responsive">
+    <table class="table table-xs mb-0">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Ad Soyad</th>
+                <th>Çalıştığı Şube</th>
+                <th>Şehir</th>
+                <th>Ülke</th>
+                <th>Durum</th>
+                <th>Cinsiyet</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                if (item.Gender == "Erkek")
+                {
+                    gender = "Erkek";
+                    genderClass = "text-success";
+                    genderprogressbarClass = "bg-success";
+                }
+                else if (item.Gender == "Kadın")
+                {
+                    gender = "Kadın";
+                    genderClass = "text-warning";
+                    genderprogressbarClass = "bg-warning";
+                }
+                <tr>
+                    <td>@count</td>
+                    <td><img src="~/adminweb/images/avatar/@item.ImageUrl" class=" rounded-circle mr-3" alt="">@item.Name @item.Surname</td>
+                    <td>@item.WorkLocationName</td>
+                    <td>@item.City</td>
+                    <td><span>@item.Country</span></td>
+                    <td>
+                        <div>
+                            <div class="progress" style="height:6px">
+                                <div class="progress-bar @genderprogressbarClass" style="width:90%"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td><i class="fa fa-circle-o @genderClass mr-2"></i> @gender</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
