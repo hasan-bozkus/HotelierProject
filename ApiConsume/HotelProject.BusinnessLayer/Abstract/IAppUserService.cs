@@ -12,5 +12,7 @@ namespace HotelProject.BusinnessLayer.Abstract
         List<AppUser> TUserListWithWorkLocation();
 
         List<AppUser> TUsersListWithWorkLocations();
+
+        int TGetAppUserCount();
     }
 }

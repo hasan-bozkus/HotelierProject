@@ -1,4 +1,5 @@
-﻿using HotelProject.WebUI.Dtos.BookingDto;
+﻿using HotelProject.WebUI.Dtos.AboutDto;
+using HotelProject.WebUI.Dtos.BookingDto;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -30,13 +31,14 @@ namespace HotelProject.WebUI.Controllers
             return View();
         }
 
-        public async Task<IActionResult> ApprovedReservation(ApprovedReservationDto approvedReservationDto)
+        public async Task<IActionResult> ApprovedReservation(ApprovedReservationDto approvedReservationDto, int id)
         {
+
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(approvedReservationDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://localhost:28867/api/Booking/bbbbb", stringContent);
-            if(responseMessage.IsSuccessStatusCode)
+            var responseMessage = await client.PutAsync($"http://localhost:28867/api/Booking/bbbbb/{id}", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }

@@ -18,6 +18,11 @@ namespace HotelProject.BusinnessLayer.Concrete
             _appUserDal = appUserDal;
         }
 
+        public int TGetAppUserCount()
+        {
+            return _appUserDal.GetAppUserCount();
+        }
+
         public void TDelete(AppUser t)
         {
             _appUserDal.Delete(t);

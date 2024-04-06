@@ -2,7 +2,7 @@
 
 namespace HotelProject.WebUI.Dtos.BookingDto
 {
-    public class ResultBookingDto
+    public class ResultLast6BookingDto
     {
         public int BookingID { get; set; }
         public string Name { get; set; }
