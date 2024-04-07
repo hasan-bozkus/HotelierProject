@@ -11665,6 +11665,8 @@ table.dataTable thead .sorting::after {
   border-top-right-radius: 0.625rem; }
   .social-graph-wrapper.widget-facebook {
     background-color: #3b5998; }
+  .social-graph-wrapper.widget-instagram {
+    background-color: #e3306c; }
   .social-graph-wrapper.widget-twitter {
     background-color: #1da1f2; }
   .social-graph-wrapper.widget-linkedin {
