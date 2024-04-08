@@ -76,25 +76,32 @@ namespace HotelProject.WebApi.Controllers
             return Ok(values);
         }
 
-        [HttpPut("aaaaa")]
-        public IActionResult aaaaa(Booking booking)
-        {
-            _bookignService.TBookingSatusChangeApproved(booking);
-            return Ok();
-        }
-
-        [HttpPut("bbbbb/{id}")]
-        public IActionResult bbbbb(int id)
-        {
-            _bookignService.TBookingSatusChangeApproved2(id);
-            return Ok();
-        }
-
         [HttpGet("Last6Bookings")]
         public IActionResult Last6Bookings()
         {
             var values = _bookignService.TLast6Bookings();
             return Ok(values);
+        }
+
+        [HttpGet("BookingAproved")]
+        public IActionResult BookingAproved(int id)
+        {
+             _bookignService.TBookingStatusChangeApproved3(id);
+            return Ok();
+        }
+
+        [HttpGet("BookingCancel")]
+        public IActionResult BookingCancel(int id)
+        {
+             _bookignService.TBookingStatusChangeCancel(id);
+            return Ok();
+        }
+
+        [HttpGet("BookingWait")]
+        public IActionResult BookingWait(int id)
+        {
+             _bookignService.TBookingStatusChangeWait(id);
+            return Ok();
         }
     }
 }
