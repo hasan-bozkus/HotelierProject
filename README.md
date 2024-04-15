@@ -46,3 +46,5 @@ Mail Gönderme İşlemleri
 
 ![swagger](https://i.hizliresim.com/9b6r2pp.png)
 
+![home](https://i.hizliresim.com/6pe91w9.png)
+
