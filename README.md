@@ -2,7 +2,7 @@
 
 <h2>Sertifika</h2>
 
-![sertifika](https://drive.google.com/file/d/1SuqLGfQea0uNxbyq71NssdeV0JvIUnSa/view?usp=drive_link)
+![sertifika](https://drive.google.com/file/d/1SuqLGfQea0uNxbyq71NssdeV0JvIUnSa.jpg)
 
 <h2>Kullanılan Teknolojiler</h2>
 
