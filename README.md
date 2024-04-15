@@ -2,7 +2,7 @@
 
 <h2>Sertifika</h2>
 
-![sertifika]([url=https://hizliresim.com/isvphk5][img]https://i.hizliresim.com/isvphk5.jpg[/img][/url])
+![sertifika](https://i.hizliresim.com/isvphk5.jpg)
 
 <h2>Kullanılan Teknolojiler</h2>
 
