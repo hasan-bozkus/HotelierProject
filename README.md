@@ -44,5 +44,5 @@ Mail Gönderme İşlemleri
 
 <h2>Projeye Ait Bazı Görseller Görseller</h2>
 
-![swagger](https://hizliresim.com/9b6r2pp.png)
+![swagger](https://i.hizliresim.com/9b6r2pp.png)
 
